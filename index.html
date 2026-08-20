@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Multimedia Page</title>
     <style>
-       
         body {
             font-family: Arial, sans-serif;
             background-color: #eef2f5;
@@ -13,9 +12,9 @@
             padding: 30px;
             margin: 0;
             display: flex;
-            flex-direction: column; 
+            flex-direction: column;
             align-items: center;
-            gap: 35px; 
+            gap: 35px;
         }
 
         .main-container {
@@ -41,14 +40,12 @@
             display: inline-block;
         }
 
-       
         .media-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
-      
         .media-card {
             background-color: #f8fafc;
             border: 1px solid #d1d5db;
@@ -63,7 +60,6 @@
             margin-bottom: 8px;
         }
 
-    
         video, img, audio {
             width: 100%;
             border-radius: 6px;
@@ -76,7 +72,7 @@
 
         img {
             object-fit: cover;
-            height: 180px; 
+            height: 180px;
             border: 1px solid #e5e7eb;
         }
 
@@ -89,7 +85,6 @@
 </head>
 <body>
 
-    <!-- ================== VIDEO SECTION ================== -->
     <div class="main-container">
         <div class="header">
             <div class="title-badge">Video Clips</div>
@@ -118,7 +113,6 @@
         </div>
     </div>
 
-    <!-- ================== PHOTO SECTION ================== -->
     <div class="main-container">
         <div class="header">
             <div class="title-badge">Favourite Photos</div>
@@ -126,7 +120,7 @@
         <div class="media-grid">
             <div class="media-card">
                 <div class="media-title">Photo 1</div>
-                <img src="photo1.jpg" alt="Photo 1">
+                <img src="photo1.png" alt="Photo 1">
             </div>
             <div class="media-card">
                 <div class="media-title">Photo 2</div>
@@ -147,29 +141,29 @@
         </div>
     </div>
 
-    <!-- ================== MUSIC SECTION ================== -->
     <div class="main-container">
         <div class="header">
             <div class="title-badge">Music List</div>
         </div>
         <div class="media-grid">
             <div class="media-card">
-                <div class="media-title">Spectre by Alanwalker</div>
+                <div class="media-title">Song 1</div>
                 <audio controls><source src="song1.mp3" type="audio/mpeg"></audio>
             </div>
             <div class="media-card">
-                <div class="media-title">Katty Perry by Katty_Perry</div>
+                <div class="media-title">Song 2</div>
                 <audio controls><source src="song2.mp3" type="audio/mpeg"></audio>
             </div>
             <div class="media-card">
-                <div class="media-title">Ulumni homecoming by Parokya ni edgar</div>
+                <div class="media-title">Song 3</div>
                 <audio controls><source src="song3.mp3" type="audio/mpeg"></audio>
             </div>
             <div class="media-card">
-                <div class="media-title">love story by taylor swift</div>
+                <div class="media-title">Song 4</div>
                 <audio controls><source src="song4.mp3" type="audio/mpeg"></audio>
-                <div class="media-card">
-                <div class="media-title">ocean eyes by billie eilish/div>
+            </div>
+            <div class="media-card">
+                <div class="media-title">Song 5</div>
                 <audio controls><source src="song5.mp3" type="audio/mpeg"></audio>
             </div>
         </div>
