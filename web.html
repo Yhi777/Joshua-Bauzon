@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Gallery</title>
+    <title>My Multimedia Page</title>
     <style>
         /* Light background na hindi masakit sa mata */
         body {
@@ -13,7 +13,9 @@
             padding: 30px;
             margin: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column; 
+            align-items: center;
+            gap: 35px; 
         }
 
         /* Main Container */
@@ -41,85 +43,138 @@
             display: inline-block;
         }
 
-        /* Grid Layout para magkatabi sa PC */
-        .video-grid {
+       
+        .media-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
-        /* Simple Video Card */
-        .video-card {
+        /* Simple Card */
+        .media-card {
             background-color: #f8fafc;
             border: 1px solid #d1d5db;
             border-radius: 8px;
             padding: 15px;
         }
 
-        .video-title {
+        .media-title {
             font-size: 1rem;
             font-weight: bold;
             color: #1f2937;
             margin-bottom: 8px;
         }
 
-        video {
+        /* Media Elements */
+        video, img, audio {
             width: 100%;
             border-radius: 6px;
-            background-color: #000000;
             display: block;
+        }
+
+        video {
+            background-color: #000000;
+        }
+
+        img {
+            object-fit: cover;
+            height: 180px; 
+            border: 1px solid #e5e7eb;
+        }
+
+        audio {
+            height: 40px;
+            outline: none;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
 
+    <!-- ================== VIDEO SECTION ================== -->
     <div class="main-container">
         <div class="header">
             <div class="title-badge">Video Clips</div>
         </div>
-
-        <div class="video-grid">
-
-            <div class="video-card">
-                <div class="video-title">Japan</div>
-                <video controls preload="metadata">
-                    <!-- PALITAN ANG FILE NAME NG VIDEO 1 -->
-                    <source src="japan.mp4" type="video/mp4">
-                </video>
+        <div class="media-grid">
+            <div class="media-card">
+                <div class="media-title">Japan</div>
+                <video controls preload="metadata"><source src="japan.mp4" type="video/mp4"></video>
             </div>
-
-            <div class="video-card">
-                <div class="video-title">China</div>
-                <video controls preload="metadata">
-                    <!-- PALITAN ANG FILE NAME NG VIDEO 2 -->
-                    <source src="china.mp4" type="video/mp4">
-                </video>
+            <div class="media-card">
+                <div class="media-title">China</div>
+                <video controls preload="metadata"><source src="china.mp4" type="video/mp4"></video>
             </div>
-
-            <div class="video-card">
-                <div class="video-title">California</div>
-                <video controls preload="metadata">
-                    <!-- PALITAN ANG FILE NAME NG VIDEO 3 -->
-                    <source src="california.mp4" type="video/mp4">
-                </video>
+            <div class="media-card">
+                <div class="media-title">California</div>
+                <video controls preload="metadata"><source src="california.mp4" type="video/mp4"></video>
             </div>
-
-            <div class="video-card">
-                <div class="video-title">Indonesia</div>
-                <video controls preload="metadata">
-                    <!-- PALITAN ANG FILE NAME NG VIDEO 4 -->
-                    <source src="indo.mp4" type="video/mp4">
-                </video>
+            <div class="media-card">
+                <div class="media-title">Indonesia</div>
+                <video controls preload="metadata"><source src="indo.mp4" type="video/mp4"></video>
             </div>
-
-            <div class="video-card">
-                <div class="video-title">Vietnam</div>
-                <video controls preload="metadata">
-                    <!-- PALITAN ANG FILE NAME NG VIDEO 5 -->
-                    <source src="vietnam.mp4" type="video/mp4">
-                </video>
+            <div class="media-card">
+                <div class="media-title">Vietnam</div>
+                <video controls preload="metadata"><source src="vietnam.mp4" type="video/mp4"></video>
             </div>
+        </div>
+    </div>
 
+    <!-- ================== PHOTO SECTION ================== -->
+    <div class="main-container">
+        <div class="header">
+            <div class="title-badge">Favourite Photos</div>
+        </div>
+        <div class="media-grid">
+            <div class="media-card">
+                <div class="media-title">Photo 1</div>
+                <img src="photo1.jpg" alt="Photo 1">
+            </div>
+            <div class="media-card">
+                <div class="media-title">Photo 2</div>
+                <img src="photo2.jpg" alt="Photo 2">
+            </div>
+            <div class="media-card">
+                <div class="media-title">Photo 3</div>
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="media-card">
+                <div class="media-title">Photo 4</div>
+                <img src="photo4.jpg" alt="Photo 4">
+            </div>
+            <div class="media-card">
+                <div class="media-title">Photo 5</div>
+                <img src="photo5.jpg" alt="Photo 5">
+            </div>
+        </div>
+    </div>
+
+    <!-- ================== MUSIC SECTION ================== -->
+    <div class="main-container">
+        <div class="header">
+            <div class="title-badge">Music List</div>
+        </div>
+        <div class="media-grid">
+            <div class="media-card">
+                <div class="media-title">Song 1</div>
+                <audio controls><source src="song1.mp3" type="audio/mpeg"></audio>
+            </div>
+            <div class="media-card">
+                <div class="media-title">Song 2</div>
+                <audio controls><source src="song2.mp3" type="audio/mpeg"></audio>
+            </div>
+            <div class="media-card">
+                <div class="media-title">Song 3</div>
+                <audio controls><source src="song3.mp3" type="audio/mpeg"></audio>
+            </div>
+            <div class="media-card">
+                <div class="media-title">Song 4</div>
+                <audio controls><source src="song4.mp3" type="audio/mpeg"></audio>
+            </div>
+            <div class="media-card">
+                <div class="media-title">Song 5</div>
+                <audio controls><source src="song5.mp3" type="audio/mpeg"></audio>
+            </div>
         </div>
     </div>
 
